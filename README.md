@@ -67,7 +67,8 @@ To this end, Romer's Data (1969-2007) and FRED's Data (2009-2025) were strung to
 [All Fed Meeting Dates:](https://fraser.stlouisfed.org/title/federal-open-market-committee-meeting-minutes-transcripts-documents-677?browse=2020s#584519)
 
 ## Training and Results 
-This can be observed through the file mult_log_regress.ipynb 
+Please refer to mult_log_regress.ipynb for the full training and testing of the 
+multinomial logistic regression models on the custom dataset. 
 
 ## Models 
-Two models were created, one for 5 classes ([-50, -25, 0, 25, 25]) and one for 3 ([cut, hold, hike]). The 5 class model had limited datapoints for specific classes, which is why a 3 class model was made. Both demonstrated high accuracy (89% - 5 classes, 99% - 3 classes) after minimal feature engineering.
+Two models were created, one for 5 classes ([-50, -25, 0, 25, 25]) and one for 3 ([cut, hold, hike]). The 5 class model had limited datapoints for specific classes, which is why a 3 class model was made. Both demonstrated high accuracy (89% - 5 classes, 99% - 3 classes) after minimal feature engineering. Full results can be observed on mult_log_regress.ipynb
