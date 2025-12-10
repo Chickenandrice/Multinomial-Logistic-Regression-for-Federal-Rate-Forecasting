@@ -1,4 +1,4 @@
-# Prediction Changes in Federal Funds Rate Through Multinomial Logistic Regression
+# Predicting Changes in Federal Funds Rate Through Multinomial Logistic Regression
 
 This project was built to determine a more feasible method of predicting changes in Federal Funds Rate after each Fed meeting. 
 
