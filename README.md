@@ -21,12 +21,16 @@ its API.
 
 [My Custom Dataset](https://www.kaggle.com/datasets/joeychenz/federal-funds-rate-forecasting-data)
 
-### Generating the Custom Dataset 
+### Generating the Custom Dataset From Scratch
 Note that you will have to go onto [FRED](https://www.stlouisfed.org/) and register an account. After you register for an account you will have to request an API key, which you should then create a .env file, and in the .env file you should insert your api key.
 
 ```env
     FRED_API_KEY={insert your api key}
 ```
+After this, you need to go to download [Romer and Romer's 2004 Monetary Policy Shocks dataset](https://www.openicpsr.org/openicpsr/project/135741/version/V1/view?path=/openicpsr/135741/fcr:versions/V1/Monetary_shocks.zip&type=file). RRimport.xlsx will need to be extracted and put in "./dataset/RRimport.xlsx". 
+
+I've also included a dates.txt, which was just a list of the official meeting dates, which was obtained from the [Federal Reserve](https://fraser.stlouisfed.org/title/federal-open-market-committee-meeting-minutes-transcripts-documents-677?browse=2020s#584519). 
+
 Then you should run create_dataset.py. 
 ```bash
     cd dataset 
@@ -60,7 +64,7 @@ to
     2008-12-19,-50 
 ```
 This had to be done because of a dataset limitation between the two data sources. 
-To this end, Romer's Data (1969-2007) and FRED's Data (2009-2025) were strung together after identifying all Federal Meeting Dates through the Federal Reserve and isolating those specific dates to create a comprehensive dataset with 510 datapoints. 
+To this end, Romer's Data (1969-2007) and FRED's Data (2009-2025) were strung together after identifying all Federal Meeting Dates through the Federal Reserve and isolating those specific dates to create a comprehensive dataset with 510 datapoints.
 
 [Romer and Romer's 2004 Monetary Policy Shocks dataset](https://www.openicpsr.org/openicpsr/project/135741/version/V1/view?path=/openicpsr/135741/fcr:versions/V1/Monetary_shocks.zip&type=file)
 
@@ -69,6 +73,9 @@ To this end, Romer's Data (1969-2007) and FRED's Data (2009-2025) were strung to
 [All Fed Meeting Dates:](https://fraser.stlouisfed.org/title/federal-open-market-committee-meeting-minutes-transcripts-documents-677?browse=2020s#584519)
 
 ## Training and Results 
+
+Note that you do not need to generate the custom dataset from scratch to run the notebook. You can download my custom dataset [here](https://www.kaggle.com/datasets/joeychenz/federal-funds-rate-forecasting-data). 
+
 Please refer to mult_log_regress.ipynb for the full training and testing of the 
 multinomial logistic regression models on the custom dataset. 
 
