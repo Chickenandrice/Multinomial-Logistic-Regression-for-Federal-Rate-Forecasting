@@ -72,3 +72,9 @@ multinomial logistic regression models on the custom dataset.
 
 ## Models 
 Two models were created, one for 5 classes ([-50, -25, 0, 25, 25]) and one for 3 ([cut, hold, hike]). The 5 class model had limited datapoints for specific classes, which is why a 3 class model was made. Both demonstrated high accuracy (89% - 5 classes, 99% - 3 classes) after minimal feature engineering. Full results can be observed on mult_log_regress.ipynb
+
+[model_3_class.pkl](https://github.com/Chickenandrice/Multinomial-Logistic-Regression-for-Federal-Rate-Forecasting/blob/master/model_3_class.pkl)
+
+[model_5_class.pkl](https://github.com/Chickenandrice/Multinomial-Logistic-Regression-for-Federal-Rate-Forecasting/blob/master/model_5_class.pkl)
+
+
